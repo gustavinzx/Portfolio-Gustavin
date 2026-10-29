@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gustavo Silva — Portfólio 2026</title>
+  <meta name="description" content="Portfólio de Gustavo Silva — Desenvolvedor Full-Stack. React, Next.js, Node.js, TypeScript, Python, Java e SQL." />
+  <meta property="og:title" content="Gustavo Silva — Portfólio 2026" />
+  <meta property="og:description" content="Desenvolvedor apaixonado por tecnologia, focado em soluções modernas e interfaces de alto nível." />
+  <meta property="og:image" content="assets/foto.jpg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Russo+One&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cover-open">
+
+  <!-- ===================== TELA DE ENTRADA (CAPA DE PORTFÓLIO CLICÁVEL) ===================== -->
+  <aside class="folio-gate" id="folioGate" role="button" tabindex="0" aria-label="Clique para abrir o portfólio de Gustavo Silva">
+    <div class="gate-halftone ht-tl" aria-hidden="true"></div>
+    <div class="gate-halftone ht-br" aria-hidden="true"></div>
+
+    <div class="gate-book" id="gateBook">
+      <span class="hud tl"></span><span class="hud tr"></span><span class="hud bl"></span><span class="hud br"></span>
+
+      <!-- Espiral em loop contínuo infinito com as linguagens de programação -->
+      <div class="spiral-stage" id="spiralStage" aria-hidden="true">
+        <div class="spiral-ring sr-1"></div>
+        <div class="spiral-ring sr-2"></div>
+        <div class="spiral-ring sr-3"></div>
+        <div class="spiral-items" id="spiralItems"></div>
+      </div>
+
+      <!-- barra superior 100% centralizada (sem círculo brilhante) -->
+      <div class="gate-meta top">
+        <span class="meta-id">00 // CAPA INTERATIVA</span>
+        <span class="gate-center-meta">github.com/gustavinzx</span>
+        <span class="gate-ver">VER 2026</span>
+      </div>
+
+      <!-- centro clean -->
+      <div class="gate-center">
+        <div class="gate-typography">
+          <div class="pf-line1">
+            <span class="pf-display">PORT</span><span class="pf-star" aria-hidden="true">✦</span><span class="pf-display">FÓLIO</span>
+          </div>
+          <div class="pf-line2">
+            <span class="pf-year-pill">EDITION // 2026</span>
+          </div>
+        </div>
+
+        <p class="gate-role">
+          <span class="role-bracket">&lt;</span> Desenvolvedor Full-Stack <span class="role-bracket">/&gt;</span>
+        </p>
+
+        <div class="gate-cta" id="gateCta">
+          <span>Clique para abrir o portfólio</span>
+          <span class="gate-cta-icon">↗</span>
+        </div>
+      </div>
+
+      <!-- barra inferior 100% centralizada (mantendo apenas o ponto de Disponível para projetos) -->
+      <div class="gate-meta bot">
+        <span>(61) 98177-3495</span>
+        <span class="gate-status"><i class="pulse"></i> DISPONÍVEL PARA PROJETOS</span>
+        <span class="meta-right">gustavossantosdev@gmail.com</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== FUNDO ARTÍSTICO FIXO DO PORTFÓLIO ===================== -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="amb-halftone top"></div>
+    <div class="amb-halftone bot"></div>
+    <svg class="amb-swirl" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g fill="none" stroke="rgba(89,195,255,0.08)">
+        <ellipse cx="720" cy="450" rx="680" ry="260" stroke-width="1.2" stroke-dasharray="18 12" />
+        <ellipse cx="720" cy="450" rx="560" ry="210" stroke-width="1.5" />
+        <ellipse cx="720" cy="450" rx="430" ry="160" stroke-width="1" stroke-dasharray="6 10" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="topbar" id="topbar">
+    <a href="#inicio" class="logo" id="logoHome" aria-label="Voltar à capa">
+      <span class="logo-pill">◂ CAPA</span>
+    </a>
+    <nav class="tabs" aria-label="Seções">
+      <a href="#perfil" class="tab" data-tab="perfil">Perfil</a>
+      <a href="#projetos" class="tab" data-tab="projetos">Projetos</a>
+      <a href="#contato" class="tab" data-tab="contato">Contato</a>
+    </nav>
+    <a href="https://github.com/gustavinzx" target="_blank" rel="noopener" class="topbar-gh" aria-label="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+    </a>
+  </header>
+
+  <main>
+    <!-- ===================== 01 · INTRO (tela de "jogo") ===================== -->
+    <section class="screen intro" id="inicio">
+      <div class="glow glow-a"></div>
+      <div class="screen-halftone ht-tr" aria-hidden="true"></div>
+      <div class="screen-halftone ht-bl" aria-hidden="true"></div>
+
+      <!-- Fundo exclusivo do Início: código real do portfólio sendo codado ao vivo -->
+      <div class="intro-code-bg" aria-hidden="true">
+        <div class="code-pane pane-left">
+          <div class="code-pane-head">
+            <span class="pane-file">src/Portfolio2026.tsx</span>
+            <span class="pane-tag">TSX · LIVE</span>
+          </div>
+          <pre class="code-stream" id="codeStreamLeft"></pre>
+        </div>
+        <div class="code-pane pane-right">
+          <div class="code-pane-head">
+            <span class="pane-file">src/core/engine.ts</span>
+            <span class="pane-tag">BUILD · OK</span>
+          </div>
+          <pre class="code-stream" id="codeStreamRight"></pre>
+        </div>
+      </div>
+
+      <div class="screen-rings" aria-hidden="true">
+        <svg viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet">
+          <g fill="none" stroke="rgba(89, 195, 255, 0.14)">
+            <ellipse cx="500" cy="280" rx="430" ry="165" stroke-width="1.2" stroke-dasharray="14 8 4 8" />
+            <ellipse cx="500" cy="280" rx="355" ry="132" stroke-width="1.5" />
+            <ellipse cx="500" cy="280" rx="275" ry="100" stroke-width="1" stroke-dasharray="28 12" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="screen-meta">
+        <span class="meta-id">01 // INÍCIO</span>
+        <span class="meta-mid">FULL-STACK DEVELOPER</span>
+        <span class="meta-pill">VER 2026</span>
+      </div>
+
+      <div class="intro-inner">
+        <div class="intro-hero reveal" id="introHero">
+          <div class="d-shape" title="D de Desenvolvedor — Moldura Portal">
+            <span class="d-badge">DEV</span>
+            <img src="assets/foto-d.jpg" alt="Foto de Gustavo Silva" />
+          </div>
+          <h1 class="intro-title">
+            <span class="big">PORT<i class="title-star" aria-hidden="true">✦</i>FÓLIO</span>
+            <span class="year">2026</span>
+          </h1>
+        </div>
+
+        <label class="intro-check reveal">
+          &lt; Desenvolvedor Full-Stack /&gt;
+        </label>
+
+        <ul class="game-menu reveal" id="gameMenu" role="menu">
+          <li><a href="#perfil" data-target="perfil" role="menuitem" class="active">Iniciar</a></li>
+          <li><a href="#projetos" data-target="projetos" role="menuitem">Projetos</a></li>
+          <li><a href="#contato" data-target="contato" role="menuitem">Contato</a></li>
+        </ul>
+        <p class="menu-hint reveal">Use <kbd>↑</kbd> <kbd>↓</kbd> e <kbd>Enter</kbd></p>
+      </div>
+    </section>
+
+    <div class="portfolio-deck" id="portfolioDeck">
+
+    <!-- ===================== 02 · PERFIL ===================== -->
+    <section class="screen profile" id="perfil">
+      <div class="glow glow-b"></div>
+      <div class="screen-halftone ht-tr" aria-hidden="true"></div>
+      <canvas id="embers" aria-hidden="true"></canvas>
+
+      <div class="screen-meta">
+        <span class="meta-id">02 // SOBRE MIM &amp; STACK</span>
+        <span class="meta-mid">github.com/gustavinzx</span>
+        <span class="meta-pill">PERFIL</span>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-left reveal">
+          <p class="hello">Opaaa!! Prazer, me chamo</p>
+          <h2 class="name">
+            <img src="assets/logo-assinatura.png" alt="Gustavo Silva" class="name-logo" />
+          </h2>
+          <p class="role"><span class="role-prefix">&gt;</span> <span id="typed"></span><span class="caret">▌</span></p>
+
+          <div class="portrait-stage">
+            <!-- grade + código de fundo (sem círculos tracejados poluindo atrás) -->
+            <div class="stage-grid"></div>
+            <pre class="bg-code" aria-hidden="true">import { Dev } from "@gustavo/core";
+const stack = ["react", "node", "sql"];
+export async function build(ideia) {
+  const app = await Dev.create(ideia);
+  return app.deploy({ escala: true });
+}
+while (vivo) { aprender(); codar(); }</pre>
+
+            <!-- ícones de tecnologias orbitando sem a linha circular de fundo -->
+            <div class="orbit orbit-1" aria-hidden="true">
+              <span class="orb" style="--a:0deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" /></span>
+              <span class="orb" style="--a:90deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" /></span>
+              <span class="orb" style="--a:180deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" /></span>
+              <span class="orb" style="--a:270deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" /></span>
+            </div>
+            <div class="orbit orbit-2" aria-hidden="true">
+              <span class="orb" style="--a:45deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" /></span>
+              <span class="orb" style="--a:165deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" /></span>
+              <span class="orb" style="--a:285deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" class="inv" alt="" /></span>
+            </div>
+
+            <!-- foto completa sorrindo em moldura clean e elegante -->
+            <div class="portrait">
+              <div class="portrait-glow"></div>
+              <div class="portrait-card">
+                <div class="portrait-frame">
+                  <img src="assets/foto-sobre.jpg" alt="Gustavo Silva sorrindo" />
+                  <div class="portrait-sheen"></div>
+                  <div class="portrait-caption">
+                    <span class="cap-badge">@gustavinzx</span>
+                    <span class="cap-sep">—</span>
+                    <span class="cap-loc">Brasília, DF</span>
+                  </div>
+                </div>
+              </div>
+              <span class="hud tl"></span><span class="hud tr"></span><span class="hud bl"></span><span class="hud br"></span>
+            </div>
+
+            <!-- símbolos flutuantes -->
+            <span class="float-sym s1" aria-hidden="true">&lt;/&gt;</span>
+            <span class="float-sym s2" aria-hidden="true">{ }</span>
+            <span class="float-sym s3" aria-hidden="true">=&gt;</span>
+            <span class="float-sym s4" aria-hidden="true">#</span>
+
+            <!-- chip terminal -->
+            <div class="term-chip">
+              <span class="t-dim">$</span> npm run dev
+              <span class="ok">✓ ready</span>
+            </div>
+
+            <!-- janela de código estilo VS Code -->
+            <div class="code-card">
+              <div class="code-bar">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span class="file">gustavo.ts</span>
+              </div>
+              <pre class="code" id="codeCard"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-right">
+          <div class="block reveal">
+            <div class="about-head">
+              <h3 class="h-display">Sobre Mim</h3>
+              <div class="about-badges">
+                <div class="status-chip"><span class="pulse"></span>Disponível para projetos</div>
+                <a href="assets/Curriculo-Gustavo-Silva.pdf" download="Curriculo-Gustavo-Silva.pdf" target="_blank" rel="noopener" class="cv-chip">📄 Currículo PDF</a>
+              </div>
+            </div>
+            <p class="about">
+              Estudante de Análise e Desenvolvimento de Sistemas na <strong>UCB</strong> (formatura jul/2027) e
+              <strong>Residente de Software no Porto Digital (Programa GrowUp)</strong>, atuando em squads com empresas
+              reais e projetos próprios. Construo aplicações escaláveis de ponta a ponta — do front-end em
+              <strong>React &amp; Next.js</strong> ao back-end (<strong>Node.js, Java/Spring Boot, PostgreSQL, MySQL e Supabase</strong>),
+              automações em <strong>n8n</strong> e pipelines <strong>CI/CD</strong>.
+            </p>
+          </div>
+
+          <div class="block reveal">
+            <h3 class="h-display">Tecnologias</h3>
+            <div class="skills" id="skills"></div>
+          </div>
+
+          <div class="two-col reveal">
+            <div>
+              <h4 class="h-sub">Formação &amp; Certificações</h4>
+              <ul class="timeline">
+                <li>
+                  <div>
+                    <strong>Análise e Desenvolvimento de Sistemas · UCB</strong>
+                    <small>4º Semestre · Jan 2025 – Jul 2027</small>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Técnico Integrado em Áudio e Vídeo · IFB</strong>
+                    <small>Instituto Federal de Brasília · 2022 – 2025</small>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>AWS Academy · Cloud Architecting (60h)</strong>
+                    <small>Rocketseat TakeOff UCB · Alura Formação</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="h-sub">Experiência</h4>
+              <ul class="exp">
+                <li><strong>Porto Digital (GrowUp)</strong> · Residente de Software (2025 – Atual)</li>
+                <li><strong>Co-líder de Squad</strong> na EHR Solutions &amp; <strong>Backend Lead</strong> no Marketplace FeiraCasa (equipe de 9 pessoas, Stripe, PIX e Supabase RLS)</li>
+                <li><strong>Freelance &amp; Full-Stack</strong> · Tríade Futsal, Adega Express e <strong>+30</strong> repositórios no GitHub</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="block reveal">
+            <h4 class="h-sub">Linguagens (nível de uso)</h4>
+            <div class="bars" id="bars"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 · PROJETOS ===================== -->
+    <section class="screen projects" id="projetos">
+      <div class="glow glow-c"></div>
+      <div class="screen-halftone ht-bl" aria-hidden="true"></div>
+
+      <!-- Fundo exclusivo de Projetos: Blueprint / Arquitetura Full-Stack com pulsos de dados -->
+      <div class="projects-bg" aria-hidden="true">
+        <svg class="arch-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="archLine" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(89,195,255,0)" />
+              <stop offset="50%" stop-color="rgba(89,195,255,0.26)" />
+              <stop offset="100%" stop-color="rgba(89,195,255,0)" />
+            </linearGradient>
+          </defs>
+          <!-- Trilhas de arquitetura -->
+          <path id="pTrack1" d="M 60 140 L 280 140 L 380 230 L 820 230 L 920 140 L 1140 140" fill="none" stroke="url(#archLine)" stroke-width="1.4" stroke-dasharray="6 6" />
+          <path id="pTrack2" d="M 80 540 L 310 540 L 420 450 L 780 450 L 890 540 L 1120 540" fill="none" stroke="url(#archLine)" stroke-width="1.4" stroke-dasharray="6 6" />
+          <path id="pTrack3" d="M 180 80 L 180 620" fill="none" stroke="rgba(89,195,255,0.08)" stroke-width="1" stroke-dasharray="4 8" />
+          <path id="pTrack4" d="M 1020 80 L 1020 620" fill="none" stroke="rgba(89,195,255,0.08)" stroke-width="1" stroke-dasharray="4 8" />
+          <!-- Pacotes de dados viajando suavemente em loop -->
+          <circle r="3.5" fill="#59c3ff">
+            <animateMotion dur="9s" repeatCount="indefinite" path="M 60 140 L 280 140 L 380 230 L 820 230 L 920 140 L 1140 140" />
+          </circle>
+          <circle r="3.5" fill="#59c3ff">
+            <animateMotion dur="11s" repeatCount="indefinite" path="M 1120 540 L 890 540 L 780 450 L 420 450 L 310 540 L 80 540" />
+          </circle>
+        </svg>
+        <span class="arch-node n1">[ FRONT-END · REACT / NEXT ]</span>
+        <span class="arch-node n2">[ API REST · NODE / JAVA ]</span>
+        <span class="arch-node n3">[ DATABASE · POSTGRES / MYSQL ]</span>
+        <span class="arch-node n4">[ MOBILE &amp; IOT · CI/CD ]</span>
+      </div>
+
+      <div class="screen-meta">
+        <span class="meta-id">03 // REPOSITÓRIOS &amp; CASES</span>
+        <span class="meta-mid">FULL-STACK · WEB · MOBILE · BACK-END</span>
+        <span class="meta-pill">14 PROJETOS</span>
+      </div>
+
+      <div class="projects-head reveal">
+        <h2 class="h-display xl">Recap Projetos 2026 <span class="tag">open source</span></h2>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="pessoal">Pessoais</button>
+          <button class="filter" data-filter="academico">Acadêmicos / Empresa</button>
+          <button class="filter" data-filter="fullstack">Full-Stack</button>
+          <button class="filter" data-filter="web">Front-End / Web</button>
+          <button class="filter" data-filter="backend">Back-End</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+        </div>
+      </div>
+
+      <div class="collage" id="collage"></div>
+
+      <a class="see-all reveal" href="https://github.com/gustavinzx?tab=repositories" target="_blank" rel="noopener">
+        Ver todos os repositórios <span>→</span>
+      </a>
+    </section>
+
+    <!-- ===================== 04 · CONTATO ===================== -->
+    <section class="screen contact" id="contato">
+      <div class="glow glow-d"></div>
+      <div class="screen-halftone ht-tr" aria-hidden="true"></div>
+
+      <!-- Fundo exclusivo de Contato: Radar de Conexão / Pulso de Sinal -->
+      <div class="contact-bg" aria-hidden="true">
+        <div class="signal-ring r1"></div>
+        <div class="signal-ring r2"></div>
+        <div class="signal-ring r3"></div>
+        <span class="net-ping p1">PING br-df.gustavo.dev · 11ms</span>
+        <span class="net-ping p2">STATUS · 200 OK // ONLINE</span>
+        <span class="net-ping p3">TLS 1.3 · DIRECT CHANNEL</span>
+      </div>
+
+      <div class="screen-meta">
+        <span class="meta-id">04 // CONEXÃO &amp; CONTATO</span>
+        <span class="meta-mid">gustavossantosdev@gmail.com</span>
+        <span class="meta-pill">ONLINE</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <div class="avatar-ring">
+            <img src="assets/foto.jpg" alt="Gustavo Silva" />
+          </div>
+          <p class="avatar-name">Gustavo Silva<br /><small>Dev Full-Stack</small></p>
+        </div>
+
+        <div class="contact-list reveal">
+          <h3 class="h-display">Contate-me</h3>
+          <a class="c-item" href="https://wa.me/5561981773495?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+            <span class="c-icon wpp"><svg viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.1-1.34A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.03.8.81-2.95-.2-.31a8.2 8.2 0 1 1 6.9 3.79Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.96-.15.17-.29.19-.54.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43l-.76-1.82c-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.54 11 11 0 0 0 4.2 3.7c1.56.68 2.17.73 2.95.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.17-.47-.29Z"/></svg></span>
+            <span><strong>WhatsApp</strong><small>(61) 98177-3495</small></span>
+          </a>
+          <a class="c-item" href="https://www.linkedin.com/in/gustavossantos-dev/" target="_blank" rel="noopener">
+            <span class="c-icon in"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></span>
+            <span><strong>LinkedIn</strong><small>/in/gustavossantos-dev</small></span>
+          </a>
+          <a class="c-item" href="https://github.com/gustavinzx" target="_blank" rel="noopener">
+            <span class="c-icon gh"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></span>
+            <span><strong>GitHub</strong><small>@gustavinzx</small></span>
+          </a>
+          <a class="c-item" href="https://www.instagram.com/gustavinzx/" target="_blank" rel="noopener">
+            <span class="c-icon ig"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg></span>
+            <span><strong>Instagram</strong><small>@gustavinzx</small></span>
+          </a>
+          <a class="c-item" href="mailto:gustavossantosdev@gmail.com">
+            <span class="c-icon mail"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/></svg></span>
+            <span><strong>E-mail</strong><small>gustavossantosdev@gmail.com</small></span>
+          </a>
+        </div>
+
+        <div class="thanks reveal">
+          <img src="assets/logo-full.png" alt="Gustavo Silva — Desenvolvedor Full-Stack" class="brand-logo" />
+          <h2 class="thanks-title">Valeu! <span>2026</span></h2>
+          <pre class="terminal" aria-hidden="true"><span class="t-dim">$</span> git commit -m <span class="t-str">"bora construir algo juntos?"</span>
+<span class="t-dim">$</span> git push origin <span class="t-acc">futuro</span> <span class="cursor">▌</span></pre>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-left">© 2026 Gustavo Silva</span>
+        <button class="back-cover" id="backCover" type="button">📖 Ver capa do portfólio</button>
+        <span class="footer-right">Feito com HTML, CSS &amp; JS</span>
+      </footer>
+    </section>
+    </div>
+  </main>
+
+  <!-- ===================== MODAL DE PROJETO ===================== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Fechar">✕</button>
+      <div class="modal-cover" id="modalCover"></div>
+      <div class="modal-body">
+        <span class="modal-cat" id="modalCat"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <ul class="modal-highlights" id="modalHighlights"></ul>
+        <div class="modal-stack" id="modalStack"></div>
+        <div class="modal-actions">
+          <a class="btn" id="modalLink" target="_blank" rel="noopener">Ver no GitHub →</a>
+          <a class="btn btn-ghost" id="modalLive" target="_blank" rel="noopener" hidden>● Site ao vivo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿Coloque aqui as imagens dos projetos com EXATAMENTE estes nomes
+(extensao .jpg, .png, .webp, .jpeg ou .gif). Se a imagem nao existir,
+o site usa a capa gerada automaticamente.
+
+ehr-solutions          -> EHR Solutions
+vtourney               -> VTourney
+adega-express          -> Adega Express
+feira-casa-marketplace -> Feira.Casa Marketplace
+pesk                   -> Pesk
+todo-list-pro          -> TODO-List Pro
+locadora-de-veiculos   -> Locadora de Veiculos
+ze-bombom              -> Ze Bombom
+up-telecom             -> UP Telecom
+triade-futsal          -> Triade Futsal
+controle-de-vendas     -> Controle de Vendas
+projeto-wakanda        -> Projeto Wakanda
+avaliador-de-expressoes -> Avaliador de Expressoes
+
+Dica: prints em 16:9 (ex. 1600x900) ficam otimos.
