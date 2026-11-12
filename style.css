@@ -203,7 +203,7 @@ body.cover-open { overflow: hidden; height: 100vh; }
   padding: 20px;
   background:
     radial-gradient(1100px 650px at 50% 50%, #0a1936 0%, #050b16 62%, #02050a 100%);
-  cursor: pointer; user-select: none; overflow: hidden;
+  user-select: none; overflow: hidden;
   transition: opacity .75s cubic-bezier(.4,0,.2,1), transform .85s cubic-bezier(.4,0,.2,1), visibility .85s;
 }
 .folio-gate::before {
@@ -393,14 +393,6 @@ body:not(.cover-open) .folio-gate {
 .gate-book > .hud.tr { top: 12px; right: 12px; }
 .gate-book > .hud.bl { bottom: 12px; left: 12px; }
 .gate-book > .hud.br { bottom: 12px; right: 12px; }
-.folio-gate:hover .gate-book {
-  transform: translateY(-3px);
-  border-color: rgba(89, 195, 255, 0.65);
-  box-shadow:
-    0 44px 110px -20px rgba(0, 0, 0, 0.96),
-    0 0 0 1px rgba(89, 195, 255, 0.25);
-}
-.folio-gate:active .gate-book,
 .folio-gate.clicking .gate-book {
   transform: scale(0.975);
   border-color: #ffffff;
@@ -519,13 +511,15 @@ body:not(.cover-open) .folio-gate {
   background: linear-gradient(90deg, #59c3ff 0%, #e4efff 50%, #59c3ff 100%);
   border: 1px solid #ffffff;
   box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.75);
-  transition: transform .2s cubic-bezier(.2,.8,.2,1), background .2s, border-color .2s;
+  cursor: pointer;
+  transition: transform .2s cubic-bezier(.2,.8,.2,1), background .2s, border-color .2s, box-shadow .2s;
 }
-.folio-gate:hover .gate-cta {
+.gate-cta:hover {
   transform: translateY(-2px) scale(1.03);
   background: #ffffff;
+  box-shadow: 0 14px 30px -6px rgba(89, 195, 255, 0.45);
 }
-.folio-gate:active .gate-cta {
+.gate-cta:active {
   transform: translateY(1px) scale(0.96);
 }
 .gate-cta-dot {
@@ -533,7 +527,7 @@ body:not(.cover-open) .folio-gate {
   animation: blink 1.2s steps(2) infinite;
 }
 .gate-cta-icon { font-size: 14px; transition: transform .25s; }
-.folio-gate:hover .gate-cta-icon { transform: translate(3px, -3px); }
+.gate-cta:hover .gate-cta-icon { transform: translate(3px, -3px); }
 
 .back-cover {
   font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;

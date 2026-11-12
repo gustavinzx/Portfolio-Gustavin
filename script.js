@@ -73,11 +73,12 @@ const PROJECTS = [
     word: "Adega\nExpress",
     glyph: "🍷",
     size: "wide",
+    live: "https://adega-express-six.vercel.app",
     cat: ["fullstack", "web", "backend", "pessoal"],
     catLabel: "Full-Stack · Front-End & Back-End · Pessoal",
     colors: ["#d97706", "#1a0b02"],
     desc: "E-commerce e sistema de gestão ponta a ponta para adegas e conveniências em monorepo: Frontend em Next.js 15 + Tailwind CSS v4 e Backend RESTful em Node.js + TypeScript + Express + Prisma ORM (MySQL).",
-    highlights: ["Frontend Web em Next.js 15 + Tailwind CSS v4", "Backend API REST em Node.js, Express, Prisma ORM e MySQL", "Checkout com PIX/Cartão, trava de maioridade e Painel Admin"],
+    highlights: ["Online em adega-express-six.vercel.app", "Frontend Web em Next.js 15 + Tailwind CSS v4", "Backend API REST em Node.js, Express, Prisma ORM e MySQL", "Checkout com PIX/Cartão, trava de maioridade e Painel Admin"],
     stack: ["Next.js 15", "TypeScript", "Tailwind v4", "Node.js", "Express", "Prisma", "MySQL"],
   },
   {
@@ -230,16 +231,47 @@ const PROJECTS = [
     highlights: ["Online em giovannaloboportfolio.netlify.app", "Páginas dedicadas: Casamento, Intervenção Cultural, Meskla 2026 e Red Bull UnB", "SEO completo com sitemap.xml, robots.txt e página 404"],
     stack: ["HTML5", "CSS3", "JavaScript", "SEO"],
   },
+  {
+    title: "PurplePiggy",
+    slug: "purple-piggy",
+    repo: "PurplePiggy",
+    word: "Purple\nPiggy",
+    glyph: "🐷",
+    size: "tall",
+    imgPos: "50% 6%",
+    featured: "⭐ Novo",
+    cat: ["fullstack", "mobile", "web", "backend", "pessoal"],
+    catLabel: "Full-Stack · Mobile Android & Web · Pessoal",
+    colors: ["#7c3aed", "#1d0838"],
+    desc: "Aplicativo nativo Android (Capacitor) e Web mobile-first de gestão financeira e educação gamificada para mulheres, com trilhas interativas, metas, alertas preventivos e conformidade LGPD.",
+    highlights: ["App nativo Android (Capacitor 8) + Web mobile-first em React 18 & TypeScript", "Backend em Supabase (PostgreSQL + RLS + Modo Demonstração isolado)", "78/78 testes automatizados passando com Vitest", "Aprendizado gamificado com repetição espaçada e desafios diários"],
+    stack: ["React 18", "TypeScript", "Capacitor", "Supabase", "Tailwind CSS", "Vitest"],
+  },
+  {
+    title: "Portfólio João",
+    slug: "portfolio-jao",
+    repo: "Portfolio-jao",
+    word: "Portfólio\nJoão",
+    glyph: "💼",
+    size: "wide",
+    cat: ["web", "pessoal"],
+    catLabel: "Front-End · React & TypeScript · Pessoal",
+    colors: ["#0ea5e9", "#07182c"],
+    desc: "Aplicação web moderna de portfólio desenvolvida com React, TypeScript, TanStack Start e Tailwind CSS, com componentes Radix UI e layout responsivo.",
+    highlights: ["Construído com TanStack Start + React + TypeScript", "Estilização com Tailwind CSS e componentes acessíveis (Radix UI)"],
+    stack: ["React", "TypeScript", "TanStack Start", "Tailwind CSS"],
+  },
 ];
 
 /* Ordem de exibição no mosaico (encaixe exato da grade de 4 colunas) */
 const ORDER = [
   "EHR Solutions", "VTourney", "Adega Express",
-  "UP Telecom", "Portfólio Giovanna",
-  "Feira.Casa Marketplace", "Zé Bombom", "Pesk",
+  "PurplePiggy", "UP Telecom", "Pesk",
+  "Feira.Casa Marketplace", "Zé Bombom", "Portfólio Giovanna",
   "TODO-List Pro", "Projeto Wakanda",
   "Tríade Futsal", "Locadora de Veículos",
-  "Controle de Vendas", "Avaliador de Expressões",
+  "Portfólio João", "Controle de Vendas",
+  "Avaliador de Expressões",
 ];
 PROJECTS.sort((a, b) => ORDER.indexOf(a.title) - ORDER.indexOf(b.title));
 
@@ -615,14 +647,14 @@ function showFolioCover() {
   folioGate.setAttribute("aria-hidden", "false");
 }
 
-folioGate.addEventListener("click", (e) => openFolio(e));
+const gateCta = $("#gateCta");
+if (gateCta) {
+  gateCta.addEventListener("click", (e) => {
+    e.stopPropagation();
+    openFolio(e);
+  });
+}
 if (location.search.includes("open=1")) openFolio();
-folioGate.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
-    openFolio();
-  }
-});
 
 $("#backCover").addEventListener("click", showFolioCover);
 $("#logoHome").addEventListener("click", (e) => {
